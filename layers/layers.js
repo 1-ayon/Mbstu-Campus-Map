@@ -1,34 +1,31 @@
 var wms_layers = [];
 
-var format_UniversityArea_0 = new ol.format.GeoJSON();
-var features_UniversityArea_0 = format_UniversityArea_0.readFeatures(json_UniversityArea_0, 
+
+        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+            'title': 'OpenStreetMap',
+            //'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' ',
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+        });
+var format_UniversityArea_1 = new ol.format.GeoJSON();
+var features_UniversityArea_1 = format_UniversityArea_1.readFeatures(json_UniversityArea_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_UniversityArea_0 = new ol.source.Vector({
+var jsonSource_UniversityArea_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_UniversityArea_0.addFeatures(features_UniversityArea_0);
-var lyr_UniversityArea_0 = new ol.layer.Vector({
+jsonSource_UniversityArea_1.addFeatures(features_UniversityArea_1);
+var lyr_UniversityArea_1 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_UniversityArea_0, 
-                style: style_UniversityArea_0,
+                source:jsonSource_UniversityArea_1, 
+                style: style_UniversityArea_1,
                 popuplayertitle: "University Area",
                 interactive: true,
-                title: '<img src="styles/legend/UniversityArea_0.png" /> University Area'
-            });
-var format_greenspace_1 = new ol.format.GeoJSON();
-var features_greenspace_1 = format_greenspace_1.readFeatures(json_greenspace_1, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_greenspace_1 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_greenspace_1.addFeatures(features_greenspace_1);
-var lyr_greenspace_1 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_greenspace_1, 
-                style: style_greenspace_1,
-                popuplayertitle: "green space",
-                interactive: true,
-                title: '<img src="styles/legend/greenspace_1.png" /> green space'
+                title: '<img src="styles/legend/UniversityArea_1.png" /> University Area'
             });
 var format_schoolgrounds_2 = new ol.format.GeoJSON();
 var features_schoolgrounds_2 = format_schoolgrounds_2.readFeatures(json_schoolgrounds_2, 
@@ -135,20 +132,20 @@ var lyr_library_8 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/library_8.png" /> library'
             });
-var format_ACADEMICBUILDINGS_9 = new ol.format.GeoJSON();
-var features_ACADEMICBUILDINGS_9 = format_ACADEMICBUILDINGS_9.readFeatures(json_ACADEMICBUILDINGS_9, 
+var format_academicbuilding_9 = new ol.format.GeoJSON();
+var features_academicbuilding_9 = format_academicbuilding_9.readFeatures(json_academicbuilding_9, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ACADEMICBUILDINGS_9 = new ol.source.Vector({
+var jsonSource_academicbuilding_9 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ACADEMICBUILDINGS_9.addFeatures(features_ACADEMICBUILDINGS_9);
-var lyr_ACADEMICBUILDINGS_9 = new ol.layer.Vector({
+jsonSource_academicbuilding_9.addFeatures(features_academicbuilding_9);
+var lyr_academicbuilding_9 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ACADEMICBUILDINGS_9, 
-                style: style_ACADEMICBUILDINGS_9,
-                popuplayertitle: "ACADEMIC BUILDINGS",
+                source:jsonSource_academicbuilding_9, 
+                style: style_academicbuilding_9,
+                popuplayertitle: "academic building",
                 interactive: true,
-                title: '<img src="styles/legend/ACADEMICBUILDINGS_9.png" /> ACADEMIC BUILDINGS'
+                title: '<img src="styles/legend/academicbuilding_9.png" /> academic building'
             });
 var format_water_10 = new ol.format.GeoJSON();
 var features_water_10 = format_water_10.readFeatures(json_water_10, 
@@ -165,60 +162,75 @@ var lyr_water_10 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/water_10.png" /> water'
             });
-var format_ROADS_11 = new ol.format.GeoJSON();
-var features_ROADS_11 = format_ROADS_11.readFeatures(json_ROADS_11, 
+var format_raods_11 = new ol.format.GeoJSON();
+var features_raods_11 = format_raods_11.readFeatures(json_raods_11, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ROADS_11 = new ol.source.Vector({
+var jsonSource_raods_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ROADS_11.addFeatures(features_ROADS_11);
-var lyr_ROADS_11 = new ol.layer.Vector({
+jsonSource_raods_11.addFeatures(features_raods_11);
+var lyr_raods_11 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ROADS_11, 
-                style: style_ROADS_11,
-                popuplayertitle: "ROADS",
+                source:jsonSource_raods_11, 
+                style: style_raods_11,
+                popuplayertitle: "raods",
                 interactive: true,
-                title: '<img src="styles/legend/ROADS_11.png" /> ROADS'
+                title: '<img src="styles/legend/raods_11.png" /> raods'
+            });
+var format_mbstulabels_12 = new ol.format.GeoJSON();
+var features_mbstulabels_12 = format_mbstulabels_12.readFeatures(json_mbstulabels_12, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_mbstulabels_12 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_mbstulabels_12.addFeatures(features_mbstulabels_12);
+var lyr_mbstulabels_12 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_mbstulabels_12, 
+                style: style_mbstulabels_12,
+                popuplayertitle: "mbstulabels",
+                interactive: true,
+                title: '<img src="styles/legend/mbstulabels_12.png" /> mbstulabels'
             });
 
-lyr_UniversityArea_0.setVisible(true);lyr_greenspace_1.setVisible(true);lyr_schoolgrounds_2.setVisible(true);lyr_SportsGround_3.setVisible(true);lyr_Mosque_4.setVisible(true);lyr_TeachersQuarter_5.setVisible(true);lyr_dormitory_6.setVisible(true);lyr_utilitybuildings_7.setVisible(true);lyr_library_8.setVisible(true);lyr_ACADEMICBUILDINGS_9.setVisible(true);lyr_water_10.setVisible(true);lyr_ROADS_11.setVisible(true);
-var layersList = [lyr_UniversityArea_0,lyr_greenspace_1,lyr_schoolgrounds_2,lyr_SportsGround_3,lyr_Mosque_4,lyr_TeachersQuarter_5,lyr_dormitory_6,lyr_utilitybuildings_7,lyr_library_8,lyr_ACADEMICBUILDINGS_9,lyr_water_10,lyr_ROADS_11];
-lyr_UniversityArea_0.set('fieldAliases', {'id': 'id', });
-lyr_greenspace_1.set('fieldAliases', {'id': 'id', });
+lyr_OpenStreetMap_0.setVisible(true);lyr_UniversityArea_1.setVisible(true);lyr_schoolgrounds_2.setVisible(true);lyr_SportsGround_3.setVisible(true);lyr_Mosque_4.setVisible(true);lyr_TeachersQuarter_5.setVisible(true);lyr_dormitory_6.setVisible(true);lyr_utilitybuildings_7.setVisible(true);lyr_library_8.setVisible(true);lyr_academicbuilding_9.setVisible(true);lyr_water_10.setVisible(true);lyr_raods_11.setVisible(true);lyr_mbstulabels_12.setVisible(true);
+var layersList = [lyr_OpenStreetMap_0,lyr_UniversityArea_1,lyr_schoolgrounds_2,lyr_SportsGround_3,lyr_Mosque_4,lyr_TeachersQuarter_5,lyr_dormitory_6,lyr_utilitybuildings_7,lyr_library_8,lyr_academicbuilding_9,lyr_water_10,lyr_raods_11,lyr_mbstulabels_12];
+lyr_UniversityArea_1.set('fieldAliases', {'id': 'id', });
 lyr_schoolgrounds_2.set('fieldAliases', {'id': 'id', });
 lyr_SportsGround_3.set('fieldAliases', {'id': 'id', });
 lyr_Mosque_4.set('fieldAliases', {'id': 'id', });
 lyr_TeachersQuarter_5.set('fieldAliases', {'id': 'id', });
-lyr_dormitory_6.set('fieldAliases', {'id': 'id', });
+lyr_dormitory_6.set('fieldAliases', {'id': 'id', 'Type': 'Type', });
 lyr_utilitybuildings_7.set('fieldAliases', {'id': 'id', });
-lyr_library_8.set('fieldAliases', {'id': 'id', });
-lyr_ACADEMICBUILDINGS_9.set('fieldAliases', {'id': 'id', });
+lyr_library_8.set('fieldAliases', {'id': 'id', 'Name': 'Name', });
+lyr_academicbuilding_9.set('fieldAliases', {'id': 'id', 'Name_1': 'Name_1', });
 lyr_water_10.set('fieldAliases', {'id': 'id', });
-lyr_ROADS_11.set('fieldAliases', {'id': 'id', });
-lyr_UniversityArea_0.set('fieldImages', {'id': 'TextEdit', });
-lyr_greenspace_1.set('fieldImages', {'id': 'TextEdit', });
+lyr_raods_11.set('fieldAliases', {'id': 'id', });
+lyr_mbstulabels_12.set('fieldAliases', {'id': 'id', 'Name': 'Name', 'Type': 'Type', 'auxiliary_storage_labeling_positionx': 'auxiliary_storage_labeling_positionx', 'auxiliary_storage_labeling_positiony': 'auxiliary_storage_labeling_positiony', 'auxiliary_storage_labeling_labelrotation': 'auxiliary_storage_labeling_labelrotation', });
+lyr_UniversityArea_1.set('fieldImages', {'id': 'TextEdit', });
 lyr_schoolgrounds_2.set('fieldImages', {'id': 'TextEdit', });
 lyr_SportsGround_3.set('fieldImages', {'id': 'TextEdit', });
-lyr_Mosque_4.set('fieldImages', {'id': '', });
-lyr_TeachersQuarter_5.set('fieldImages', {'id': '', });
-lyr_dormitory_6.set('fieldImages', {'id': 'TextEdit', });
+lyr_Mosque_4.set('fieldImages', {'id': 'TextEdit', });
+lyr_TeachersQuarter_5.set('fieldImages', {'id': 'TextEdit', });
+lyr_dormitory_6.set('fieldImages', {'id': 'TextEdit', 'Type': 'TextEdit', });
 lyr_utilitybuildings_7.set('fieldImages', {'id': 'TextEdit', });
-lyr_library_8.set('fieldImages', {'id': 'TextEdit', });
-lyr_ACADEMICBUILDINGS_9.set('fieldImages', {'id': 'TextEdit', });
+lyr_library_8.set('fieldImages', {'id': 'TextEdit', 'Name': 'TextEdit', });
+lyr_academicbuilding_9.set('fieldImages', {'id': 'TextEdit', 'Name_1': 'TextEdit', });
 lyr_water_10.set('fieldImages', {'id': 'TextEdit', });
-lyr_ROADS_11.set('fieldImages', {'id': 'TextEdit', });
-lyr_UniversityArea_0.set('fieldLabels', {'id': 'no label', });
-lyr_greenspace_1.set('fieldLabels', {'id': 'no label', });
+lyr_raods_11.set('fieldImages', {'id': 'TextEdit', });
+lyr_mbstulabels_12.set('fieldImages', {'id': 'TextEdit', 'Name': 'TextEdit', 'Type': 'TextEdit', 'auxiliary_storage_labeling_positionx': 'Hidden', 'auxiliary_storage_labeling_positiony': 'Hidden', 'auxiliary_storage_labeling_labelrotation': 'Hidden', });
+lyr_UniversityArea_1.set('fieldLabels', {'id': 'no label', });
 lyr_schoolgrounds_2.set('fieldLabels', {'id': 'no label', });
 lyr_SportsGround_3.set('fieldLabels', {'id': 'no label', });
 lyr_Mosque_4.set('fieldLabels', {'id': 'no label', });
 lyr_TeachersQuarter_5.set('fieldLabels', {'id': 'no label', });
-lyr_dormitory_6.set('fieldLabels', {'id': 'no label', });
+lyr_dormitory_6.set('fieldLabels', {'id': 'no label', 'Type': 'no label', });
 lyr_utilitybuildings_7.set('fieldLabels', {'id': 'no label', });
-lyr_library_8.set('fieldLabels', {'id': 'no label', });
-lyr_ACADEMICBUILDINGS_9.set('fieldLabels', {'id': 'no label', });
+lyr_library_8.set('fieldLabels', {'id': 'no label', 'Name': 'no label', });
+lyr_academicbuilding_9.set('fieldLabels', {'id': 'no label', 'Name_1': 'no label', });
 lyr_water_10.set('fieldLabels', {'id': 'no label', });
-lyr_ROADS_11.set('fieldLabels', {'id': 'no label', });
-lyr_ROADS_11.on('precompose', function(evt) {
+lyr_raods_11.set('fieldLabels', {'id': 'no label', });
+lyr_mbstulabels_12.set('fieldLabels', {'id': 'no label', 'Name': 'inline label - visible with data', 'Type': 'no label', });
+lyr_mbstulabels_12.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

@@ -21,7 +21,7 @@ var style_schoolgrounds_2 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        fill: new ol.style.Fill({color: 'rgba(255,255,229,1.0)'}),
+        fill: new ol.style.Fill({color: 'rgba(237,237,236,1.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
