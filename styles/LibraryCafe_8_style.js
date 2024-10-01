@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_library_8 = function(feature, resolution){
+var style_LibraryCafe_8 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
